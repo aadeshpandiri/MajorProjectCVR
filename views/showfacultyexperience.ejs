@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Faculty Details</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <style>
+      /* Custom style */
+      .navbar {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">FMS</a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse2"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+              <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/file" class="nav-item nav-link active">Bulk UI</a>
+                <a href="/filter" class="nav-item nav-link active">Filter</a>
+                <a href="/test" class="nav-item nav-link active">Add Records</a>
+                <a href="/viewrecords" class="nav-item nav-link active">View Records</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="mx-auto" style="max-width: 100%">
+          <center>
+            <h2><%= title %></h2>
+          </center>
+          <p></p>
+          <center>
+            <button class="btn btn-success" onclick="ExportToExcel('xlsx')">
+              Download Table
+            </button>
+          </center>
+          <p></p>
+          <div style="overflow-x: auto">
+            <table
+              id="tbl_exporttable_to_xls"
+              class="table table-striped table-bordered table-sm table-warning border border-dark"
+              cellspacing="0"
+              width="100%"
+            >
+              <thead>
+                <tr>
+                  <th>Faculty Id</th>
+                  <th>Designation</th>
+                  <th>Experience</th>
+                  <th>Organisation</th>
+                  <th>Work Nature</th>
+                  <th>Joining Date</th>
+                  <th>Employment Type</th>
+                  <th>Ratified Service</th>
+                  <th>Certificate Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% users.forEach(function(user){ %>
+                <tr>
+                  <td><%= user.Faculty_ID %></td>
+                  <td><%= user.Designation %></td>
+                  <td><%= user.Experience %></td>
+                  <td><%= user.Organisation %></td>
+                  <td><%= user.work_nature %></td>
+                  <td><%= user.JoinDate %></td>
+                  <td><%= user.employment_type %></td>
+                  <td><%= user.ratified_service %></td>
+                  <td><%= user.certificate_link %></td>
+                </tr>
+                <% }); %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function ExportToExcel(type, fn, dl) {
+        var elt = document.getElementById("tbl_exporttable_to_xls");
+        var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+        return dl
+          ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
+          : XLSX.writeFile(wb, fn || "datasheet." + (type || "xlsx"));
+      }
+      document.getElementById("submit").onclick = function () {
+        var selected = [];
+        for (var option of document.getElementById("filters").options) {
+          if (option.selected) {
+            selected.push(option.value);
+          }
+        }
+        alert(selected);
+      };
+    </script>
+  </body>
+</html>

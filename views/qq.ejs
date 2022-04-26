@@ -1,0 +1,1525 @@
+<html>
+  <head>
+    <title>Data Entry Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Custom style */
+      .navbar {
+        margin-bottom: 1rem;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">FMS</a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse2"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+              <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/file" class="nav-item nav-link active">Bulk UI</a>
+                <a href="/filter" class="nav-item nav-link active">Filter</a>
+                <a href="/test" class="nav-item nav-link active">Add Records</a>
+                <a href="/viewrecords" class="nav-item nav-link active">View Records</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- <center><h1>CVR COLLEGE OF ENGINEERING</h1> </center> -->
+        <br />
+        <center><h2>Add Records</h2></center>
+        <center>
+          <p></p>
+          <h6>
+            Please select the right table from dropdown to add your data
+            <p></p>
+          </h6>
+          <div class="mx-auto" style="max-width: 400px">
+            <select
+              class="form-select"
+              name="cases"
+              id="cases"
+              data-bs-toggle="dropdown"
+            >
+              <option value="profile">Profile</option>
+              <option value="education">Education</option>
+              <option value="experience">Experience</option>
+              <option value="address">Address</option>
+              <option value="subjects">Subjects</option>
+              <option value="book">Books</option>
+              <option value="conference">Conference</option>
+              <option value="leaves">Leaves</option>
+              <option value="visiting">Visiting Faculty</option>
+              <option value="competence">Faculty Competence</option>
+              <option value="Award">Awards</option>
+              <option value="FDP">Faculty Development Programs</option>
+              <option value="Journal">Journals</option>
+              <option value="patent">Patents</option>
+            </select>
+          </div>
+        </center>
+        <br />
+        <p></p>
+        <form
+          name="form1"
+          onSubmit="actionOnSubmit()"
+          method="post"
+          enctype="application/json"
+          class="mx-auto"
+          style="max-width: 900px"
+        >
+          <div class="container profile" id="profile">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_Id_Profile"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Name_Profile"
+                placeholder="Please enter Faculty Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">DOB</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="DOB"
+                name="DOB_Profile"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">PAN No</label>
+              <input
+                type="text"
+                class="form-control"
+                name="PAN_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter PAN no"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Qualification</label>
+              <input
+                type="text"
+                class="form-control"
+                name="qualification_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your Qualification"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Specialisation</label>
+              <input
+                type="text"
+                class="form-control"
+                name="specialisation_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your Specialisation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">PHD University</label>
+              <input
+                type="text"
+                class="form-control"
+                name="PHDUniversity_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your Designation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Joining Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="joining"
+                name="JoiningDate_Profile"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Designation</label>
+              <input
+                type="text"
+                class="form-control"
+                name="designation_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your Designation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Designation Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="Designation"
+                name="DesignationDate_Profile"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Is Associated</label>
+              <input
+                type="text"
+                class="form-control"
+                name="IsAssociated_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter Yes/No"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Association Nature</label>
+              <input
+                type="text"
+                class="form-control"
+                name="AssociationNature_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter Yes/No"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Relieving Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="relieving"
+                name="RelievingDate_Profile"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Pay Scale</label>
+              <input
+                type="text"
+                class="form-control"
+                name="PayScale_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your Level of Pay"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Experience</label>
+              <input
+                type="number"
+                class="form-control"
+                name="Experience_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your Level of Experience"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Otherinfo</label>
+              <input
+                type="text"
+                class="form-control"
+                name="Otherinfo_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter your additional information"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Gender</label>
+              <select class="form-control" id="gender" name="Gender_Profile">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Not willing to say</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="formGroupExampleInput2">Aadhar No</label>
+              <input
+                type="text"
+                class="form-control"
+                name="Aadhar_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter Aadhar No"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Mobile</label>
+              <input
+                type="number"
+                class="form-control"
+                name="Mobile_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter Mobile number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Alternate Mobile</label>
+              <input
+                type="number"
+                class="form-control"
+                name="AlternateMobile_Profile"
+                id="formGroupExampleInput2"
+                placeholder="Please enter  Alternate Mobile number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                name="Email_Profile"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Alternate Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                name="AlternateEmail_Profile"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </div>
+          </div>
+
+          <div class="container education" id="education">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Facultyid"
+                name="Facultyid_Education"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Degree Diploma</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Degreediploma"
+                name="Degreediploma_Education"
+                placeholder="Please enter Degree or Diploma"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Specilisation</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Specilisation"
+                name="Specialisation_Education"
+                placeholder="Please enter Specilisation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Board_University</label>
+              <input
+                type="text"
+                class="form-control"
+                id="BoardUniversity"
+                name="Boarduniversity_Education"
+                placeholder="Please enter Board University"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Percentage/CPI/GPA</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Percentage"
+                name="Percentage_Education"
+                placeholder="Please enter Percentage(83) or CGPA (8.4)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Year of Passing out</label>
+              <input
+                type="number"
+                class="form-control"
+                id="Year"
+                name="Year_Education"
+                placeholder="Please enter your Year of passing out"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Division</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Division"
+                name="Division_Education"
+                placeholder="Please enter your Division"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Certificate Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Certificatelink"
+                name="Certificatelink_Education"
+                placeholder="Please paste your Certificate link here"
+              />
+            </div>
+          </div>
+
+          <div class="container experience" id="experience">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_Experience"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Designation</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Designation_Experience"
+                placeholder="Please enter your Designation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Experience</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Experience_Experience"  
+                placeholder="Please enter Experience in years"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Organisation</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Oraganisation_Experience"
+                placeholder="Please enter your Previous Organisation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Work Nature</label>
+              <input
+                type="text"
+                class="form-control"
+                name="WorkNature_Experience"
+                id="formGroupExampleInput"
+                placeholder="Please describe your work nature"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Joining Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="joining"
+                name="JoiningDate_Experience"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Employment Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="EmployementType_Experience"
+                placeholder="Please enter your Employment Type"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Ratified Service</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="RatifiedService_Experience"
+                placeholder="Please enter about Ratified Service"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Certificate Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="CertificateLink_Experience"
+                placeholder="Please paste your Certificate link here"
+              />
+            </div>
+          </div>
+
+          <div class="container address" id="address">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_address"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">House No</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="HouseNo_address"
+                placeholder="Please enter House No"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Street name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="StreetName_address"
+                placeholder="Please enter Street name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Area Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="AreaName_address"
+                placeholder="Please enter Area name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Address Line 1</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="AddressLineone_address"
+                placeholder="Please enter your Address Line 1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Address Line 2</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="AddressLinetwo_address"
+                placeholder="Please enter your Address Line 2"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">District</label>
+              <input
+                type="text"
+                class="form-control"
+                name="District_address"
+                id="formGroupExampleInput"
+                placeholder="Please enter District"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">State</label>
+              <input
+                type="text"
+                class="form-control"
+                name="State_address"
+                id="formGroupExampleInput"
+                placeholder="Please enter State"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">PIN Code</label>
+              <input
+                type="text"
+                class="form-control"
+                name="PIN_address"
+                id="formGroupExampleInput2"
+                placeholder="Please enter PIN code"
+              />
+            </div>
+          </div>
+
+          <div class="container subjects" id="subjects">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Subject Code:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Subjectcode_sub"
+                name="Subjectcode_subb"
+                placeholder="Please enter Subject Code"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Subject Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Subjectname_sub"
+                name="Subjectname_subb"
+                placeholder="Please enter Subject Name"
+              />
+            </div>
+          </div>
+          <div class="container conference" id="conference">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_Conference"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Conference Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Name_Conference"
+                placeholder="Please enter Conference Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Year</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Year_Conference"
+                placeholder="Please enter Year"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Venue</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Venue_Conference"
+                placeholder="Please enter Venue"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Title_Conference"
+                placeholder="Please enter your Conference title"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">ISBN Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="ISBN_Conference"
+                placeholder="Please enter your ISBN Number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Publisher Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Publisher_Conference"
+                placeholder="Please enter Publisher Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput"
+                >Link for First page of PDF</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Linkfirstpage_Conference"
+                placeholder="Please enter Link for First page of PDF"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">From Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="from_date"
+                name="fromdate_Conference"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">To Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="to_date"
+                name="todate_Conference"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Page Numbers</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="PageNumbers_Conference"
+                placeholder="Please enter Page Numbers"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Category</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Category_Conference"
+                placeholder="Please enter Category"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Scopus</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Scopus_Conference"
+                placeholder="Please enter Scopus"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">sci</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="webofscience_Conference"
+                placeholder="Please enter sci / Web of science"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Number of citations</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="numberofcitations_Conference"
+                placeholder="Please enter Number of citations"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">UGC Listed (Yes/NO)</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="ugclisted_Conference"
+                placeholder="Please enter UGC Listed (Yes/NO)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Others</label>
+              <input
+                type="text"
+                class="form-control"
+                name="others_Conference"
+                id="formGroupExampleInput"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Certificate Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="certificate_Conference"
+                placeholder="Please enter Certificate Link"
+              />
+            </div>
+          </div>
+
+          <div class="container book" id="book">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_book"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Title_book"
+                placeholder="Please enter Title"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">ISBN Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="ISBN_book"
+                placeholder="Please enter ISBN Number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Volume</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Volume_book"
+                placeholder="Please enter Volume"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Publisher Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Pusblisher_book"
+                placeholder="Please enter your Publisher Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">No of Pages</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="NoofPages_book"
+                placeholder="Please enter your No of Pages"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Pulishing Year</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Year_book"
+                placeholder="Please enter Year"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Certificate Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Certificate_book"
+                placeholder="Please enter Certificate Link"
+              />
+            </div>
+          </div>
+
+          <div class="container visiting" id="visiting">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_visiting"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Year</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Year_visiting"
+                placeholder="Please enter Year"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">From Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="from_date"
+                name="fromdate_visiting"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">To Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="to_date"
+                name="todate_visiting"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Subject_visiting"
+                placeholder="Please enter Subject"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Activity</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Activity_visiting"
+                placeholder="Please enter Activity"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Qualification</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Qualification_visiting"
+                placeholder="Please enter Qualification"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Organisation</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Organisation_visiting"
+                placeholder="Please enter Organisation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Designation</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Designation_visiting"
+                placeholder="Please enter Designation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Proof</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Proof_visiting"
+                placeholder="Please enter Proof"
+              />
+            </div>
+          </div>
+
+          <div class="container leaves" id="leaves">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_leaves"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Leave Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="leavetype_leaves"
+                placeholder="Please enter Leave Type"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">From Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="from_date"
+                name="fromdate_leaves"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">To Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="to_date"
+                name="todate_leaves"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Year</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="year_leaves"
+                placeholder="Please enter Year"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput">Document Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Document_leaves"
+                placeholder="Please enter Document Link"
+              />
+            </div>
+          </div>
+
+          <div class="container competence" id="competence">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Facultyid"
+                name="Facultyid_comp"
+                value="default"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Subject Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Subjectcode"
+                name="Subjectcode_comp"
+                placeholder="Please enter Subject Code"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Specilisation Category</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Specilisationcategory"
+                name="Specilisationcategory"
+                placeholder="Please enter Specilisation Category"
+              />
+            </div>
+          </div>
+
+          <div class="container patent" id="patent">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_patent"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Patent Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="patenttitle_patent"
+                placeholder="Please enter Patent Title"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Patent Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="patentNumber_patent"
+                placeholder="Please enter Patent Number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Awarded Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="Awarded_date"
+                name="Awardeddate_patent"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">File Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="File_date"
+                name="Filedate_patent"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Published Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="Published_date"
+                name="Publisheddate_patent"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Status</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Status_patent"
+                placeholder="Please enter Status (Active or Inactive)"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput">Certificate Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Certificate_patent"
+                placeholder="Please enter Certificate Link"
+              />
+            </div>
+          </div>
+
+          <div class="container Journal" id="Journal">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_Journal"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Faculty Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="FacultyName_Journal"
+                placeholder="Please enter Faculty Name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput"> Publication Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Title_Journal"
+                placeholder="Please enter your Publication Title"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Publisher Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Publisher_Journal"
+                placeholder="Please enter Publisher Name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput2">ISBN Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="ISBN_Journal"
+                placeholder="Please enter your ISBN Number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">VolumeNo</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="VolumeNo_Journal"
+                placeholder="Please enter VolumeNo"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Scopus</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Scopus_Journal"
+                placeholder="Please enter Scopus"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">National_international</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="National_Journal"
+                placeholder="Please enter Scopus"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Proof Link</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="certificate_Journal"
+                placeholder="Please enter Certificate Link"
+              />
+            </div>
+          </div>
+
+          <div class="container FDP" id="FDP">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_FDP"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="FacultyName_FDP"
+                placeholder="Please enter Title"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Marks</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Marks_FDP"
+                placeholder="Please enter Marks"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Days</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Days_FDP"
+                placeholder="Please enter Days"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Program Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="ProgramTitle_FDP"
+                placeholder="Please enter Venue"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Sponsering Agency</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="agency_FDP"
+                placeholder="Please enter Sponsering Agency"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">Start Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="from_date"
+                name="fromdate_FDP"
+              />
+            </div>
+            <div class="form-group">
+              <label for="date">End Date</label>
+              <input
+                type="date"
+                class="input-group date"
+                id="to_date"
+                name="todate_FDP"
+              />
+            </div>
+          </div>
+
+          <div class="container Award" id="Award">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Faculty_ID_Award"
+                placeholder="Please enter Faculty_ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Faculty Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="FacultyName_Award"
+                placeholder="Please enter FacultyName"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Awards</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                name="Awards_Award"
+                placeholder="Please enter Awards"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Issuing Organisation</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="IssuingOrganisation_Award"
+                placeholder="Please enter Issuing Organisation"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Organisation Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="OrganisationAddress_Award"
+                placeholder="Please enter Organisation Address"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Organisation Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="OrganisationEmail_Award"
+                placeholder="Please enter Organisation Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Year</label>
+              <input
+                type="number"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="Year_Award"
+                placeholder="Please enter Year"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Is Fellowship</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="IsFellowship_Award"
+                placeholder="Please enter your Is Fellowship"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="FacultyEmail_Award"
+                placeholder="Please enter Faculty Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Faculty Contact</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                name="FacultyContact_Award"
+                placeholder="Please enter Faculty Contact"
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <center>
+            <button type="submit" class="btn btn-success">Add Record</button>
+          </center>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+      //   $("div").hide();
+      // $("#profile").hide();
+      $("#experience").hide();
+      $("#education").hide();
+      $("#address").hide();
+      $("#experience").hide();
+      $("#conference").hide();
+      $("#book").hide();
+      $("#visiting").hide();
+      $("#leaves").hide();
+      $("#competence").hide();
+      $("#subjects").hide();
+      $("#Award").hide();
+      $("#FDP").hide();
+      $("#Journal").hide();
+      $("#patent").hide();
+      $(function () {
+        $("#datepicker").datepicker();
+      });
+      $("#cases").change(function () {
+        var value = this.value;
+
+        // $("div").hide();
+        $("#profile").hide();
+        $("#experience").hide();
+        $("#education").hide();
+        $("#address").hide();
+        $("#conference").hide();
+        $("#book").hide();
+        $("#visiting").hide();
+        $("#leaves").hide();
+        $("#competence").hide();
+        $("#subjects").hide();
+        $("#Award").hide();
+        $("#FDP").hide();
+        $("#Journal").hide();
+        $("#patent").hide();
+        var s = "#" + this.value;
+        $(s).show();
+        // console.log(s);
+      });
+
+      function actionOnSubmit() {
+        var e = document.getElementById("cases");
+        var strUser = e.value;
+        console.log(strUser);
+        if (strUser === "subjects") {
+          document.form1.action = "/savesubjects";
+        } else if (strUser === "education") {
+          document.form1.action = "/saveeducation";
+        } else if (strUser === "competence") {
+          document.form1.action = "/savefacultycompetence";
+        } else if (strUser === "leaves") {
+          document.form1.action = "/saveleaves";
+        } else if (strUser === "address") {
+          document.form1.action = "/saveaddress";
+        } else if (strUser === "experience") {
+          document.form1.action = "/saveexperience";
+        } else if (strUser === "conference") {
+          document.form1.action = "/saveconference";
+        } else if (strUser === "visiting") {
+          document.form1.action = "/savevisiting";
+        } else if (strUser === "profile") {
+          document.form1.action = "/saveprofile";
+        } else if (strUser === "book") {
+          document.form1.action = "/savebook";
+        } else if (strUser === "Award") {
+          document.form1.action = "/saveawards";
+        } else if (strUser === "patent") {
+          document.form1.action = "/savepatents";
+        } else if (strUser === "FDP") {
+          document.form1.action = "/savefdp";
+        } else if (strUser === "Journal") {
+          document.form1.action = "/savejournals";
+        } else {
+          document.form1.action = "/showerror";
+        }
+      }
+    </script>
+  </body>
+</html>

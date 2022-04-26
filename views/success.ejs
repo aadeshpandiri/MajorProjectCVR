@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navbar Color Schemes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Custom style */
+        .navbar {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="m-4">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">FMS</a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse2">
+                        <div class="navbar-nav">
+                            <a href="/" class="nav-item nav-link active">Home</a>
+                            <a href="/file" class="nav-item nav-link active">Bulk UI</a>
+                            <a href="/filter" class="nav-item nav-link active">Filter</a>
+                            <a href="/test" class="nav-item nav-link active">Add Records</a>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+     <br/><br/>
+    <div class="card mx-auto" style="max-width: 60%;">
+            <div class="card-header bg-warning">
+                <center><h3><%= textmessage %></center>
+            </div>
+            <div class="card-body">
+                <center>
+                    
+                    <h5 class="card-title">  To View  <%= tablename %> TABLE </h5>
+
+                    <p></p> 
+                    <% if (tablename === "faculty_experience") { %>
+                      <a href="/showfacultyexperience" class="btn btn-danger">Explore Faculty Experience Table</a>
+                    <%} 
+                    else if (tablename === "subjects"){ %>
+                    <a href="/showsubjects" class="btn btn-danger">Explore Subjects Table</a>
+                    <% }
+                    else if (tablename === "faculty_address"){ %>
+                    <a href="/showfacultyaddress" class="btn btn-danger">Explore Faculty Address Table</a>
+                    <% } 
+                    else if (tablename === "faculty_award"){ %>
+                    <a href="/showfacultyawards" class="btn btn-danger">Explore Faculty Award Table</a>
+                    <% } 
+                    else if (tablename === "faculty_book"){ %>
+                    <a href="/showfacultybook" class="btn btn-danger">Explore Faculty Book Table</a>
+                    <% }
+                    else if (tablename === "faculty_competence"){ %>
+                    <a href="/showfacultycompetence" class="btn btn-danger">Explore Faculty Competence Table</a>
+                    <% }
+                    else if (tablename === "faculty_conference"){ %>
+                    <a href="/showfacultyconference" class="btn btn-danger">Explore Faculty Conference Table</a>
+                    <% } 
+                    else if (tablename === "faculty_education"){ %>
+                    <a href="/showfacultyeducation" class="btn btn-danger">Explore Faculty Education Table</a>
+                    <% } 
+                    else if (tablename === "faculty_fdp"){ %>
+                    <a href="/showfacultyfdp" class="btn btn-danger">Explore Faculty FDP Table</a>
+                    <% } 
+                    else if (tablename === "faculty_journals"){ %>
+                    <a href="/showfacultyjournals" class="btn btn-danger">Explore Faculty Journal Table</a>
+                    <% }
+                    else if (tablename === "faculty_leaves"){ %>
+                    <a href="/showfacultyleaves" class="btn btn-danger">Explore Faculty Leaves Table</a>
+                    <% } 
+                    else if (tablename === "faculty_patent"){ %>
+                    <a href="/showfacultypatent" class="btn btn-danger">Explore Faculty Patent Table</a>
+                    <% } 
+                    else if (tablename === "faculty_visiting"){ %>
+                    <a href="/showfacultyvisiting" class="btn btn-danger">Explore Faculty visitng Table</a>
+                    <% } 
+                    else { %>
+                    <a href="/showfacultyprofile" class="btn btn-danger">Explore Faculty Profile Table</a>
+                    <% } %>
+                <p class="card-text"></p>
+                
+                </center>
+            </div>
+        </div>
+    <script>
+   fs.unlink('C:/Users/Aade$h/Desktop/backupp/test/uploads/faculty_award.csv', function (err) {
+    if (err) throw err;
+    // if no error, file has been deleted successfully
+    console.log('File deleted!');
+}); 
+</script>
+
+</body>
+
+
+</html>

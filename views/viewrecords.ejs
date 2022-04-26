@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>View Records</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Custom style */
+      .navbar {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">FMS</a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse2"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+              <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/file" class="nav-item nav-link active">Bulk UI</a>
+                <a href="/filter" class="nav-item nav-link active">Filter</a>
+                <a href="/test" class="nav-item nav-link active">Add Records</a>
+                <a href="/viewrecords" class="nav-item nav-link active"
+                  >View Records</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="mx-auto" style="max-width: 450px">
+          <center>
+            <h5>Please Select Table to View Data</h5>
+            <p></p>
+            <br />
+            <form
+              id="tableForm"
+              name="form1"
+              onSubmit="actionOnSubmit()"
+              method="GET  "
+            >
+              <select
+                class="selectpicker form-select"
+                data-style="btn-info"
+                name="selectpicker"
+                id="selectpicker"
+                data-bs-toggle="dropdown"
+              >
+                <option value="faculty_profile">Profile</option>
+                <option value="faculty_education">Education</option>
+                <option value="faculty_experience">Experience</option>
+                <option value="faculty_address">Address</option>
+                <option value="subjects">Subjects</option>
+                <option value="faculty_book">Books</option>
+                <option value="faculty_conference">Conference</option>
+                <option value="faculty_leaves">Leaves</option>
+                <option value="faculty_visiting">Visiting Faculty</option>
+                <option value="faculty_competence">Faculty Competence</option>
+                <option value="faculty_award">Awards</option>
+                <option value="faculty_fdp">
+                  Faculty Development Programs
+                </option>
+                <option value="faculty_journals">Journals</option>
+                <option value="faculty_patent">Patents</option>
+              </select>
+              <br />
+             
+
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </center>
+        </div>
+      </div>
+    </div>
+    <script>
+      function actionOnSubmit() {
+        var e = document.getElementById("selectpicker");
+        var strUser = e.value;
+        console.log(strUser);
+        if (strUser === "subjects") {
+          document.form1.action = "/showsubjects";
+        } else if (strUser === "faculty_education") {
+          document.form1.action = "/showfacultyeducation";
+        } else if (strUser === "faculty_competence") {
+          document.form1.action = "/showfacultycompetence";
+        } else if (strUser === "faculty_leaves") {
+          document.form1.action = "/showfacultyleaves";
+        } else if (strUser === "faculty_address") {
+          document.form1.action = "/showfacultyaddress";
+        } else if (strUser === "faculty_experience") {
+          document.form1.action = "/showfacultyexperience";
+        } else if (strUser === "faculty_conference") {
+          document.form1.action = "/showfacultyconference";
+        } else if (strUser === "faculty_visiting") {
+          document.form1.action = "/showfacultyvisiting";
+        } else if (strUser === "faculty_profile") {
+          document.form1.action = "/showfacultyprofile";
+        } else if (strUser === "faculty_book") {
+          document.form1.action = "/showfacultybook";
+        } else if (strUser === "faculty_award") {
+          document.form1.action = "/showfacultyawards";
+        } else if (strUser === "faculty_patent") {
+          document.form1.action = "/showfacultypatent";
+        } else if (strUser === "faculty_fdp") {
+          document.form1.action = "/showfacultyfdp";
+        } else if (strUser === "faculty_journals") {
+          document.form1.action = "/showfacultyjournals";
+        } else {
+          document.form1.action = "/showerror";
+        }
+      }
+    </script>
+  </body>
+</html>
