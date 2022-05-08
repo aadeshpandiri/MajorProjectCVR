@@ -1,161 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="icon" href="./icon.jpg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CVR</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /* Custom style */
+      .navbar {
+        margin-bottom: 1rem;
+      }
 
-<head>
-  <link rel="icon" href="./icon.jpg"/>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CVR</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-    /* Custom style */
-    .navbar {
-      margin-bottom: 1rem;
-    }
+      .image-para {
+        color: rgb(168, 233, 84);
+        font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+        font-style: italic;
+      }
+    </style>
+  </head>
 
-    .image-para {
-      color: rgb(168, 233, 84);
-      font: 14px "Open Sans", Helvetica, Arial, sans-serif;
-      font-style: italic;
-    }
-  </style>
-</head>
+  <body>
+    <div class="container">
+      <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a href="#" class="navbar-brand">FMS</a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse2"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse2">
+              <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link active">Home</a>
+                <a href="/file" class="nav-item nav-link active">Bulk UI</a>
+                <a href="/filter" class="nav-item nav-link active">Filter</a>
+                <a href="/test" class="nav-item nav-link active">Add Records</a>
+                <a href="/viewrecords" class="nav-item nav-link active"
+                  >View Records</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
 
-<body>
-  <div class="container">
-    <div class="m-4">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a href="#" class="navbar-brand">FMS</a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse2">
-          <div class="navbar-nav">
-            <a href="/" class="nav-item nav-link active">Home</a>
-            <a href="/file" class="nav-item nav-link active">Bulk UI</a>
-            <a href="/filter" class="nav-item nav-link active">Filter</a>
-            <a href="/test" class="nav-item nav-link active">Add Records</a>
-            <a href="/viewrecords" class="nav-item nav-link active">View Records</a>
+        <h1
+          style="
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            color: #53b215;
+          "
+        >
+          FACULTY INFORMATION MANAGEMENT SYSTEM
+        </h1>
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="4"
+            ></button>
           </div>
 
-        </div>
-      </div>
-    </nav>
-
-
-    <h1 style="
-          text-align: center;
-          font-style: normal;
-          font-weight: bold;
-          color: darkviolet;
-        ">
-      CVR COLLEGE OF ENGINEERING
-    </h1>
-    <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-      <!-- Indicators/dots -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-
-      </div>
-
-      <!-- The slideshow/carousel -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://cvr.ac.in/home4/images/library2.jpg" alt="CVR LIBRARY" class="d-block"
-            style="width:100%;height: 450px;">
-          <div class="carousel-caption">
-            <h3>CVR Library</h3>
-            <p class="image-para">
-              The College has a dedicated three-storied building with a total
-              area of 1800 sqm, for the exclusive use of Library and
-              Postgraduate Research facilities. The College library has 69,227
-              books, 14,857 reference titles and 165 journals (including IEEE
-              Journals along with full access to Digital Libraries of IEEE,
-              ASME, ASCE etc.) that cater to all the seven branches of
-              engineering, as well as other disciplines.
-            </p>
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://cvr.ac.in/home4/images/main5.jpg"
+                alt="CVR COLLEGE OF ENGINEERING"
+                class="d-block"
+                style="width: 100%; height: 450px"
+              />
+              <div class="carousel-caption">
+                <h3>CVR College of Engineering</h3>
+                <!-- <p class="image-para">
+                  The College is spread over a built-up area of over 36,000 sqm.
+                  on a sprawling 33-acre campus amidst verdant surroundings.
+                </p> -->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://cvr.ac.in/p/p322712934507176/cse%20hod%202.jpg"
+                alt="Dr. Vani Vathsala"
+                class="d-block"
+                style="width: 100%; height: 450px"
+              />
+              <div class="carousel-caption">
+                <h3>Dr. Vani Vathsala</h3>
+                <!-- <p class="image-para">
+                  Head of Department Computer Science and Engineering
+                </p> -->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://cvr.ac.in/home4/images/library2.jpg"
+                alt="CVR LIBRARY"
+                class="d-block"
+                style="width: 100%; height: 450px"
+              />
+              <div class="carousel-caption">
+                <h3>CVR Library</h3>
+                <!-- <p class="image-para">
+                  The College has a dedicated three-storied building with a
+                  total area of 1800 sqm, for the exclusive use of Library and
+                  Postgraduate Research facilities. The College library has
+                  69,227 books, 14,857 reference titles and 165 journals
+                  (including IEEE Journals along with full access to Digital
+                  Libraries of IEEE, ASME, ASCE etc.) that cater to all the
+                  seven branches of engineering, as well as other disciplines.
+                </p> -->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://cvr.ac.in/p/p322712934507176/10632821_794551857323279_8499576932099078966_n_794551857323279.jpg"
+                alt="CVR COLLEGE OF ENGINEERING"
+                class="d-block"
+                style="width: 100%; height: 450px"
+              />
+              <div class="carousel-caption">
+                <h3>Department of CSE</h3>
+                <!-- <p class="image-para">
+                  All the Professors and Teaching Faculty of CVR College of
+                  Engineering in Computer Science Dept.
+                </p> -->
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <img
+                src="https://cvr.ac.in/p/p322712934507176/208251_322712964507173_1757177742_n_322712964507173.jpg"
+                alt="CVR COLLEGE OF ENGINEERING"
+                class="d-block"
+                style="width: 100%; height: 450px"
+              />
+              <div class="carousel-caption">
+                <h3>Prof L C Shiva Reddy</h3>
+                <!-- <p class="image-para">
+                  Vice Principal CVR College of Engineering
+                </p> -->
+              </div>
+            </div>
           </div>
+
+          <!-- Left and right controls/icons -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
-        <div class="carousel-item">
-          <img src="https://cvr.ac.in/home4/images/main5.jpg" alt="CVR COLLEGE OF ENGINEERING" class="d-block"
-            style="width:100%;height:450px">
-          <div class="carousel-caption">
-            <h3>CVR College of Engineering</h3>
-            <p class="image-para">
-              The College is spread over a built-up area of over 36,000 sqm.
-              on a sprawling 33-acre campus amidst verdant surroundings.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Left and right controls/icons -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-
-    <!-- Two equal columns -->
-    <div class="row">
-      <div class="col">
-        <br/>
-        <h4>Cherabuddi Society</h4>
-        <p>
-          The Cherabuddi Education Society was registered in January 1999 as an
-          NRI-promoted society. The Society aims at creating a state-of-the-art
-          engineering institution in association with leading NRI technology
-          professionals and well-known academicians of the twin states of
-          Telangana & Andhra Pradesh. The Society aims to harness technical
-          excellence with a commitment to the ethos of 'useful learning'. Our
-          students remain at the heart of our vision, benefiting from our
-          innovative teaching methods, and close links with premier companies
-          and research institutions in India and abroad. Students will enjoy
-          engineering and will have the chance to develop skills that will last
-          a lifetime.
-        </p>
-        <br />
-
-        <h4>About Institution:</h4>
-        <p>
-          The CVR College of Engineering was established in 2000. It is approved
-          by the All India Council for Technical Education and accredited by the
-          National Board of Accreditation, India. CVR College of Engineering was
-          affiliated with Jawaharlal Nehru Technological University, Hyderabad.
-        </p>
-      </div>
-      <div class="col">
-        <br/>
-        <h2>Deans</h2>
         <p></p>
-        <h3>Dean Academics:</h3>
-        <p>
-          Dr. N.V. Rao is the holder of M.Tech. & Ph.D. degrees from Osmania
-          University (1st Rank) and JNTU, Hyderabad respectively.He served DRDO
-          for 36 years, retiring in July 2009 as Scientist G from DMRL,
-          Hyderabad. He has more than 30 Technical Reports, and papers published
-          in National and International Journals and Conferences.
-        </p>
-        <br /><br/>
-        <h3>Dean Research</h3>
-        <p>
-          Prof. K.Lal Kishore, Ph.D, SMIEEE, FIETE, FIE, LMISTE, LMISHM Prof.
-          Kondepudi Lal Kishore former Vice-Chancellor of JNTUA,Ananthapur
-          during 2012-15, is a distinguished academician and administrator with
-          over 34 years of Teaching experience.
-        </p>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. N.V. Rao</h5>
+                <p class="card-text">Dean Academics</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. Hrushikesha Mohanty</h5>
+                <p class="card-text">Visiting Professor Emeritus</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <!-- <img
+                class="card-img-top"
+                src="https://cvr.ac.in/cse/faculty/total/Prof%20L%20C%20Siva%20Reddy.jpg"
+                alt="Card image cap"
+              /> -->
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Prof. L.C. Siva Reddy</h5>
+                <p class="card-text">Prof. &amp; Vice Principal</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. A. Vani Vathsala</h5>
+                <p class="card-text">Professor&nbsp; &amp; HoD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p></p>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. Raghava V. Cherabuddi</h5>
+                <p class="card-text">Professor</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. K. Narendar Reddy</h5>
+                <p class="card-text">Professor &amp; Associate Dean</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. Raghava M</h5>
+                <p class="card-text">Professor &amp; Associate Dean</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">Faculty CSE</div>
+              <div class="card-body">
+                <h5 class="card-title">Dr. D. Durga Bhavani</h5>
+                <p class="card-text">Professor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p></p>
+        <!-- Two equal columns -->
+        <div class="row">
+          <div class="col">
+            <br />
+            <h4>Cherabuddi Society</h4>
+            <p>
+              The Cherabuddi Education Society was registered in January 1999 as
+              an NRI-promoted society. The Society aims at creating a
+              state-of-the-art engineering institution in association with
+              leading NRI technology professionals and well-known academicians
+              of the twin states of Telangana & Andhra Pradesh. The Society aims
+              to harness technical excellence with a commitment to the ethos of
+              'useful learning'. Our students remain at the heart of our vision,
+              benefiting from our innovative teaching methods, and close links
+              with premier companies and research institutions in India and
+              abroad. Students will enjoy engineering and will have the chance
+              to develop skills that will last a lifetime.
+            </p>
+            <br />
+
+            <h4>About Institution:</h4>
+            <p>
+              The CVR College of Engineering was established in 2000. It is
+              approved by the All India Council for Technical Education and
+              accredited by the National Board of Accreditation, India. CVR
+              College of Engineering was affiliated with Jawaharlal Nehru
+              Technological University, Hyderabad.
+            </p>
+          </div>
+          <div class="col">
+            <br />
+            <h2>Deans</h2>
+            <p></p>
+            <h3>Dean Academics:</h3>
+            <p>
+              Dr. N.V. Rao is the holder of M.Tech. & Ph.D. degrees from Osmania
+              University (1st Rank) and JNTU, Hyderabad respectively.He served
+              DRDO for 36 years, retiring in July 2009 as Scientist G from DMRL,
+              Hyderabad. He has more than 30 Technical Reports, and papers
+              published in National and International Journals and Conferences.
+            </p>
+            <br /><br />
+            <h3>Dean Research</h3>
+            <p>
+              Prof. K.Lal Kishore, Ph.D, SMIEEE, FIETE, FIE, LMISTE, LMISHM
+              Prof. Kondepudi Lal Kishore former Vice-Chancellor of
+              JNTUA,Ananthapur during 2012-15, is a distinguished academician
+              and administrator with over 34 years of Teaching experience.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-</body>
-
+  </body>
 </html>

@@ -74,7 +74,7 @@ app.post('/file', function (req, res) {
     })
 
 })
-app.post('/api/simple', function (req, res) {
+app.post('/api/simple', function (req, res,next) {
 
     console.log("Outside method : ", g);
 
@@ -135,6 +135,7 @@ app.post('/api/simple', function (req, res) {
                                         headers: headers,
                                         rows: rows
                                     });
+                                    return next();
                                     // 'please correct your ' + headers[i] + ' column in your file with correct name as ' + rows[i]["Field"] + ' column '
 
 
@@ -164,7 +165,7 @@ app.post('/api/simple', function (req, res) {
                                         tablename: req.body.selectpicker,
                                         filename:g
                                     });
-
+                                    return next();
 
                                 }
                                 
@@ -362,6 +363,19 @@ app.get('/bulkui', (req, res) => {
 
 
 // });
+app.get('/fphotos', (req, res) => {
+
+    let sql = "SELECT Name,Link,Designation FROM facultyref";
+    let query = connection.query(sql, (err, rows) => {
+        if (err) throw err;
+        res.render('fphotos', {
+            title: 'CSE FACULTY ',
+            users: rows
+            
+        });
+    });
+});
+
 
 app.get('/showsubjects', (req, res) => {
 
